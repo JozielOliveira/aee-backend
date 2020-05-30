@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "steps",
+  "info": {
+    "name": "Steps"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "quiz": {
+      "via": "steps",
+      "model": "quiz"
+    },
+    "questions": {
+      "via": "step",
+      "collection": "questions"
+    }
+  }
+}

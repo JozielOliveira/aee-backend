@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "student_responses",
+  "info": {
+    "name": "StudentResponse"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "response": {
+      "type": "string",
+      "required": true
+    },
+    "student": {
+      "model": "students",
+      "via": "student_responses"
+    },
+    "question": {
+      "via": "student_responses",
+      "model": "questions"
+    }
+  }
+}

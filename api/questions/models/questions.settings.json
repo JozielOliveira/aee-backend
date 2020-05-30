@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "questions",
+  "info": {
+    "name": "questions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "number",
+        "boolean",
+        "checklist",
+        "options",
+        "file"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "defaultValue": {
+      "type": "string"
+    },
+    "step": {
+      "model": "steps",
+      "via": "questions"
+    },
+    "student_responses": {
+      "collection": "student-response",
+      "via": "question"
+    },
+    "validations": {
+      "collection": "validations",
+      "via": "questions",
+      "dominant": true
+    }
+  }
+}

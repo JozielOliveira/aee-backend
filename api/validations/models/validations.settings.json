@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "validations",
+  "info": {
+    "name": "validations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "value": {
+      "type": "enumeration",
+      "enum": [
+        "required",
+        "email"
+      ],
+      "required": true
+    },
+    "questions": {
+      "via": "validations",
+      "collection": "questions"
+    }
+  }
+}
