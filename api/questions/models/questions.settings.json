@@ -49,6 +49,9 @@
       "collection": "validations",
       "via": "questions",
       "dominant": true
+    },
+    "options": {
+      "type": "string"
     }
   }
 }

@@ -595,6 +595,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "options": {
+                  "type": "string"
                 }
               }
             }
