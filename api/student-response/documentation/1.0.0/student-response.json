@@ -565,7 +565,8 @@
           "question": {
             "required": [
               "id",
-              "name"
+              "name",
+              "position"
             ],
             "properties": {
               "id": {
@@ -606,6 +607,9 @@
               },
               "options": {
                 "type": "string"
+              },
+              "position": {
+                "type": "integer"
               }
             }
           }

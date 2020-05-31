@@ -517,7 +517,8 @@
       "Steps": {
         "required": [
           "id",
-          "title"
+          "title",
+          "position"
         ],
         "properties": {
           "id": {
@@ -557,7 +558,8 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -598,15 +600,22 @@
                 },
                 "options": {
                   "type": "string"
+                },
+                "position": {
+                  "type": "integer"
                 }
               }
             }
+          },
+          "position": {
+            "type": "integer"
           }
         }
       },
       "NewSteps": {
         "required": [
-          "title"
+          "title",
+          "position"
         ],
         "properties": {
           "title": {
@@ -623,6 +632,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "position": {
+            "type": "integer"
           }
         }
       }

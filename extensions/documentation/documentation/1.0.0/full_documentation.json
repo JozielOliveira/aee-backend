@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/30/2020 4:40:04 PM"
+    "x-generation-date": "05/31/2020 3:52:36 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5284,7 +5284,8 @@
       "Questions": {
         "required": [
           "id",
-          "name"
+          "name",
+          "position"
         ],
         "properties": {
           "id": {
@@ -5319,7 +5320,8 @@
           "step": {
             "required": [
               "id",
-              "title"
+              "title",
+              "position"
             ],
             "properties": {
               "id": {
@@ -5339,6 +5341,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "position": {
+                "type": "integer"
               }
             }
           },
@@ -5390,12 +5395,16 @@
           },
           "options": {
             "type": "string"
+          },
+          "position": {
+            "type": "integer"
           }
         }
       },
       "NewQuestions": {
         "required": [
-          "name"
+          "name",
+          "position"
         ],
         "properties": {
           "name": {
@@ -5441,6 +5450,9 @@
           },
           "options": {
             "type": "string"
+          },
+          "position": {
+            "type": "integer"
           }
         }
       },
@@ -5464,7 +5476,8 @@
             "items": {
               "required": [
                 "id",
-                "title"
+                "title",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -5484,6 +5497,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "position": {
+                  "type": "integer"
                 }
               }
             }
@@ -5512,7 +5528,8 @@
       "Steps": {
         "required": [
           "id",
-          "title"
+          "title",
+          "position"
         ],
         "properties": {
           "id": {
@@ -5552,7 +5569,8 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -5593,15 +5611,22 @@
                 },
                 "options": {
                   "type": "string"
+                },
+                "position": {
+                  "type": "integer"
                 }
               }
             }
+          },
+          "position": {
+            "type": "integer"
           }
         }
       },
       "NewSteps": {
         "required": [
-          "title"
+          "title",
+          "position"
         ],
         "properties": {
           "title": {
@@ -5618,6 +5643,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "position": {
+            "type": "integer"
           }
         }
       },
@@ -5659,7 +5687,8 @@
           "question": {
             "required": [
               "id",
-              "name"
+              "name",
+              "position"
             ],
             "properties": {
               "id": {
@@ -5700,6 +5729,9 @@
               },
               "options": {
                 "type": "string"
+              },
+              "position": {
+                "type": "integer"
               }
             }
           }
@@ -5840,7 +5872,8 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -5881,6 +5914,9 @@
                 },
                 "options": {
                   "type": "string"
+                },
+                "position": {
+                  "type": "integer"
                 }
               }
             }

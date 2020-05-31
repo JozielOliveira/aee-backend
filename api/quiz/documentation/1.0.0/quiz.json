@@ -534,7 +534,8 @@
             "items": {
               "required": [
                 "id",
-                "title"
+                "title",
+                "position"
               ],
               "properties": {
                 "id": {
@@ -554,6 +555,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "position": {
+                  "type": "integer"
                 }
               }
             }

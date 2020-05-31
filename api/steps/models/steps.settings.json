@@ -18,12 +18,16 @@
       "type": "text"
     },
     "quiz": {
-      "via": "steps",
-      "model": "quiz"
+      "model": "quiz",
+      "via": "steps"
     },
     "questions": {
       "via": "step",
       "collection": "questions"
+    },
+    "position": {
+      "type": "integer",
+      "required": true
     }
   }
 }

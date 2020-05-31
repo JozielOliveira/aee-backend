@@ -18,8 +18,8 @@
       "type": "text"
     },
     "steps": {
-      "collection": "steps",
-      "via": "quiz"
+      "via": "quiz",
+      "collection": "steps"
     }
   }
 }
