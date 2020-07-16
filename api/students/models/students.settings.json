@@ -15,13 +15,74 @@
       "required": true
     },
     "user": {
+      "via": "students",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "students"
+      "model": "user"
     },
     "student_responses": {
-      "via": "student",
-      "collection": "student-response"
+      "collection": "student-response",
+      "via": "student"
+    },
+    "date_birth": {
+      "type": "date"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Feminino",
+        "Masculino"
+      ],
+      "required": true
+    },
+    "nationality": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 2
+    },
+    "zip_code": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "street": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "school": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "school_grade": {
+      "type": "string"
+    },
+    "teacher": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "responsible_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "responsible_phone_number": {
+      "type": "string",
+      "required": true,
+      "minLength": 8
     }
   }
 }

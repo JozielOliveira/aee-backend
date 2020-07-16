@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/student-responses": {
+    "/flows": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Flow"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Student-response"
+          "Flow"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Flow"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Student-response"
+          "Flow"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStudent-response"
+                "$ref": "#/components/schemas/NewFlow"
               }
             }
           }
         }
       }
     },
-    "/student-responses/count": {
+    "/flows/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Student-response"
+          "Flow"
         ],
         "parameters": []
       }
     },
-    "/student-responses/{id}": {
+    "/flows/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Flow"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Student-response"
+          "Flow"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Flow"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Student-response"
+          "Flow"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStudent-response"
+                "$ref": "#/components/schemas/NewFlow"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Student-response"
+          "Flow"
         ],
         "parameters": [
           {
@@ -527,162 +514,144 @@
   },
   "components": {
     "schemas": {
-      "Student-response": {
+      "Flow": {
         "required": [
           "id",
-          "response"
+          "name",
+          "description"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "response": {
+          "name": {
             "type": "string"
           },
-          "student": {
-            "required": [
-              "id",
-              "name",
-              "gender",
-              "nationality",
-              "state",
-              "city",
-              "street",
-              "school",
-              "teacher",
-              "responsible_name",
-              "responsible_phone_number"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "student_responses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "date_birth": {
-                "type": "string"
-              },
-              "age": {
-                "type": "integer"
-              },
-              "gender": {
-                "type": "string"
-              },
-              "nationality": {
-                "type": "string"
-              },
-              "zip_code": {
-                "type": "string"
-              },
-              "state": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "street": {
-                "type": "string"
-              },
-              "school": {
-                "type": "string"
-              },
-              "school_grade": {
-                "type": "string"
-              },
-              "teacher": {
-                "type": "string"
-              },
-              "responsible_name": {
-                "type": "string"
-              },
-              "responsible_phone_number": {
-                "type": "string"
-              }
-            }
+          "description": {
+            "type": "string"
           },
-          "question": {
+          "quiz": {
             "required": [
               "id",
-              "name",
-              "position"
+              "title"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              },
-              "label": {
+              "title": {
                 "type": "string"
               },
               "description": {
                 "type": "string"
               },
-              "placeholder": {
-                "type": "string"
-              },
-              "defaultValue": {
-                "type": "string"
-              },
-              "step": {
-                "type": "string"
-              },
-              "student_responses": {
+              "steps": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "validations": {
+              "creator": {
+                "type": "string"
+              },
+              "flows": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "options": {
-                "type": "string"
-              },
-              "position": {
-                "type": "integer"
-              },
-              "file": {
-                "type": "string"
+              }
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "flows": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "profession": {
+                  "type": "string"
+                }
               }
             }
           }
         }
       },
-      "NewStudent-response": {
+      "NewFlow": {
         "required": [
-          "response"
+          "name",
+          "description"
         ],
         "properties": {
-          "response": {
+          "name": {
             "type": "string"
           },
-          "student": {
+          "description": {
             "type": "string"
           },
-          "question": {
+          "quiz": {
             "type": "string"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Flow"
+    }
+  ]
 }

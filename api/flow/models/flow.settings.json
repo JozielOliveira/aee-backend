@@ -1,34 +1,31 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "quizzes",
+  "collectionName": "flows",
   "info": {
-    "name": "quiz"
+    "name": "flow"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string",
       "required": true
     },
     "description": {
-      "type": "text"
+      "type": "richtext",
+      "required": true
     },
-    "steps": {
-      "collection": "steps",
-      "via": "quiz"
+    "quiz": {
+      "model": "quiz",
+      "via": "flows"
     },
-    "creator": {
-      "via": "quizzes",
+    "users": {
+      "via": "flows",
       "plugin": "users-permissions",
-      "model": "user"
-    },
-    "flows": {
-      "via": "quiz",
-      "collection": "flow"
+      "collection": "user"
     }
   }
 }

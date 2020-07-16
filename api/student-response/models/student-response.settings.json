@@ -15,8 +15,8 @@
       "required": true
     },
     "student": {
-      "model": "students",
-      "via": "student_responses"
+      "via": "student_responses",
+      "model": "students"
     },
     "question": {
       "via": "student_responses",

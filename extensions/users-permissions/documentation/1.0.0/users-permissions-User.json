@@ -1250,7 +1250,16 @@
             "items": {
               "required": [
                 "id",
-                "name"
+                "name",
+                "gender",
+                "nationality",
+                "state",
+                "city",
+                "street",
+                "school",
+                "teacher",
+                "responsible_name",
+                "responsible_phone_number"
               ],
               "properties": {
                 "id": {
@@ -1267,9 +1276,116 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "date_birth": {
+                  "type": "string"
+                },
+                "age": {
+                  "type": "integer"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "nationality": {
+                  "type": "string"
+                },
+                "zip_code": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "street": {
+                  "type": "string"
+                },
+                "school": {
+                  "type": "string"
+                },
+                "school_grade": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "responsible_name": {
+                  "type": "string"
+                },
+                "responsible_phone_number": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "steps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "flows": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "flows": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "quiz": {
+                  "type": "string"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "profession": {
+            "type": "string"
           }
         }
       },
@@ -1313,6 +1429,21 @@
             "items": {
               "type": "string"
             }
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "flows": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "profession": {
+            "type": "string"
           }
         }
       }

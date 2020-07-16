@@ -517,7 +517,16 @@
       "Students": {
         "required": [
           "id",
-          "name"
+          "name",
+          "gender",
+          "nationality",
+          "state",
+          "city",
+          "street",
+          "school",
+          "teacher",
+          "responsible_name",
+          "responsible_phone_number"
         ],
         "properties": {
           "id": {
@@ -565,6 +574,21 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "flows": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "profession": {
+                "type": "string"
               }
             }
           },
@@ -590,12 +614,72 @@
                 }
               }
             }
+          },
+          "date_birth": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "Feminino",
+              "Masculino"
+            ]
+          },
+          "nationality": {
+            "type": "string",
+            "minLength": 2
+          },
+          "zip_code": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "minLength": 2
+          },
+          "city": {
+            "type": "string",
+            "minLength": 2
+          },
+          "street": {
+            "type": "string",
+            "minLength": 2
+          },
+          "school": {
+            "type": "string",
+            "minLength": 2
+          },
+          "school_grade": {
+            "type": "string"
+          },
+          "teacher": {
+            "type": "string",
+            "minLength": 2
+          },
+          "responsible_name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "responsible_phone_number": {
+            "type": "string",
+            "minLength": 8
           }
         }
       },
       "NewStudents": {
         "required": [
-          "name"
+          "name",
+          "gender",
+          "nationality",
+          "state",
+          "city",
+          "street",
+          "school",
+          "teacher",
+          "responsible_name",
+          "responsible_phone_number"
         ],
         "properties": {
           "name": {
@@ -609,6 +693,57 @@
             "items": {
               "type": "string"
             }
+          },
+          "date_birth": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "Feminino",
+              "Masculino"
+            ]
+          },
+          "nationality": {
+            "type": "string",
+            "minLength": 2
+          },
+          "zip_code": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "minLength": 2
+          },
+          "city": {
+            "type": "string",
+            "minLength": 2
+          },
+          "street": {
+            "type": "string",
+            "minLength": 2
+          },
+          "school": {
+            "type": "string",
+            "minLength": 2
+          },
+          "school_grade": {
+            "type": "string"
+          },
+          "teacher": {
+            "type": "string",
+            "minLength": 2
+          },
+          "responsible_name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "responsible_phone_number": {
+            "type": "string",
+            "minLength": 8
           }
         }
       }

@@ -56,6 +56,12 @@
     "position": {
       "type": "integer",
       "required": true
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }

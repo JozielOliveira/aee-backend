@@ -614,6 +614,21 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "flows": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "profession": {
+                  "type": "string"
                 }
               }
             }

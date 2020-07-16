@@ -550,6 +550,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "creator": {
+                "type": "string"
+              },
+              "flows": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -603,6 +612,9 @@
                 },
                 "position": {
                   "type": "integer"
+                },
+                "file": {
+                  "type": "string"
                 }
               }
             }

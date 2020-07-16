@@ -561,6 +561,93 @@
                 }
               }
             }
+          },
+          "creator": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "flows": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "profession": {
+                "type": "string"
+              }
+            }
+          },
+          "flows": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "quiz": {
+                  "type": "string"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -576,6 +663,15 @@
             "type": "string"
           },
           "steps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "creator": {
+            "type": "string"
+          },
+          "flows": {
             "type": "array",
             "items": {
               "type": "string"

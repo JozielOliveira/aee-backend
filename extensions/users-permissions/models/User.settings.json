@@ -55,8 +55,21 @@
       "configurable": false
     },
     "students": {
-      "via": "user",
-      "collection": "students"
+      "collection": "students",
+      "via": "user"
+    },
+    "quizzes": {
+      "collection": "quiz",
+      "via": "creator"
+    },
+    "flows": {
+      "collection": "flow",
+      "via": "users",
+      "dominant": true
+    },
+    "profession": {
+      "type": "string",
+      "required": false
     }
   }
 }

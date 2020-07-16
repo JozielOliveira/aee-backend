@@ -580,6 +580,9 @@
                 },
                 "position": {
                   "type": "integer"
+                },
+                "file": {
+                  "type": "string"
                 }
               }
             }
